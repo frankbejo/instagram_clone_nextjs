@@ -20,14 +20,14 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Navbar />
-        {
+        {/* {
           data ?
           data.map(item => {
             return <li key={item._id}>{`${item.post_owner_id}${item.post_owner_name}`}</li>
           })
           :
           null
-        }
+        } */}
       </main>
       <footer className={styles.footer}>
       </footer>
