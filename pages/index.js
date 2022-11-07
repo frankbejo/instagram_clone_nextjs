@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Navbar from './components/Navbar'
-import React, {useState, useEffect} from 'react'
 
 export async function getServerSideProps() {
     // Fetch data from external API
