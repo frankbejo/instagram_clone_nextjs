@@ -13,6 +13,7 @@ export default async function get_Posts(req, res){
                 res.status(200).json(posts)
             }catch(err){
                 res.status(500).json(err)
+                console.log(err)
             }
             break;
         case "POST":
