@@ -1,12 +1,16 @@
-import React from 'react'
-import Link from 'next/router'
-
 const Navbar = () => {
     return (
         <nav>
-            <a href="/">Home</a>
+            Home
+            {/* {
+                data.map(item => {
+                    console.log(item)
+                })
+            } */}
         </nav>
     )
 }
+
+
 
 export default Navbar
