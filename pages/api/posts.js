@@ -4,6 +4,9 @@ import Posts from "./database/schema";
 
 export default async function get_Posts(req, res){
     main().catch(error => console.log(error))
+
+    res.setHeader("Cache-Control","s-maxage=10, stale-while-revalidate")
+    
     const {method} = req;
 
     switch(method){
