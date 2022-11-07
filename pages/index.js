@@ -5,7 +5,7 @@ import React, {useState, useEffect} from 'react'
 
 export async function getServerSideProps() {
     // Fetch data from external API
-    const res = await fetch("http://localhost:3000/api/posts")
+    const res = await fetch("https://instagram-clone-nextjs-mauve.vercel.app/api/posts")
     const data = await res.json()
 
     return { props: { 
