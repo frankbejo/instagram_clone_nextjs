@@ -2,13 +2,13 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Navbar from './Navbar'
 
-export async function getServerSideProps() {
-    // Fetch data from external API
-    const res = await fetch("https://instagram-clone-nextjs-mauve.vercel.app/api/posts")
-    const data = await res.json()
-    return { props: { 
-        data } 
-    }}
+// export async function getServerSideProps() {
+//     // Fetch data from external API
+//     const res = await fetch("https://instagram-clone-nextjs-mauve.vercel.app/api/posts")
+//     const data = await res.json()
+//     return { props: { 
+//         data } 
+//     }}
 
 export default function Home() {
   return (
