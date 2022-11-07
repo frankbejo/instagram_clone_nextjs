@@ -10,7 +10,7 @@ export async function getServerSideProps() {
         data } 
     }}
 
-export default function Home({data}) {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
