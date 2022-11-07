@@ -2,16 +2,15 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Navbar from './components/Navbar'
 
-export async function getServerSideProps() {
-    // Fetch data from external API
-    const res = await fetch("http://localhost:3000/api/posts")
-    const data = await res.json()
+// export async function getServerSideProps() {
+//     // Fetch data from external API
+//     const res = await fetch("http://localhost:3000/api/posts")
+//     const data = await res.json()
+//     return { props: { 
+//         data } 
+//     }}
 
-    return { props: { 
-        data } 
-    }}
-
-export default function Home({data}) {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
