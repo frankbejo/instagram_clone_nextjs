@@ -22,9 +22,12 @@ export default function Home({data}) {
       <main className={styles.main}>
         <Navbar />
         {
+          data ?
           data.map(item => {
-            return <li>{`${item.post_owner_id}${item.post_owner_name}`}</li>
+            return <li key={item._id}>{`${item.post_owner_id}${item.post_owner_name}`}</li>
           })
+          :
+          null
         }
       </main>
       <footer className={styles.footer}>
