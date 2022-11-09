@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const postsSchema = new mongoose.Schema({
+const postSchema = new mongoose.Schema({
     post_owner_id: {
         type: String,
         required: true,
@@ -16,5 +16,5 @@ const postsSchema = new mongoose.Schema({
     }
 }, {timestamps: true});
 
-module.exports = mongoose.models.Posts || mongoose.model("Posts", postsSchema)
+module.exports = mongoose.models.Post || mongoose.model("Post", postSchema)
 

@@ -1,6 +1,8 @@
-const Navbar = () => {
+import styles from '../../styles/Home.module.css'
+
+function Navbar(){
     return (
-        <nav>
+        <nav className={styles.navbar}>
             Home
             {/* {
                 data.map(item => {

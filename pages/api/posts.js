@@ -1,6 +1,6 @@
 
-import main from "./database/database";
-import Posts from "./database/schema";
+import main from "./database/Database";
+import Post from "./database/PostSchema";
 
 export default async function get_Posts(req, res){
     main().catch(error => console.log(error))
@@ -11,7 +11,7 @@ export default async function get_Posts(req, res){
     switch(method){
         case "GET":
             try{
-                const posts = await Posts.find()
+                const posts = await Post.find()
                 res.status(200).json(posts)
             }catch(err){
                 res.status(500).json(err)
@@ -19,7 +19,7 @@ export default async function get_Posts(req, res){
             break;
         case "POST":
             try{
-                const posts = await Posts.create(req.body)
+                const posts = await Post.create(req.body)
                 res.status(200).json(posts)
             }catch(err){
                 res.status(500).json(err)
