@@ -1,4 +1,4 @@
-import Posts from "../database/PostSchema";
+import Posts from "../../../database/PostSchema";
 
 export default async function handler(req, res){
     const post_id = req.query.post_id;
