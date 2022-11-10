@@ -1,9 +1,12 @@
 import styles from '../../styles/Home.module.css'
+import Link from 'next/link'
+import Image from 'next/image'
+import textLogo from '../../public/textlogo.png'
 
 function Navbar(){
     return (
         <nav className={styles.navbar}>
-            Home
+            <Link href="/" className={styles.home}><Image src={textLogo} /></Link>
             {/* {
                 data.map(item => {
                     console.log(item)

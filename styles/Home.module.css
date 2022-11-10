@@ -2,12 +2,16 @@
     display: flex;
 }
 
-
 .navbar{
     padding: 20px;
     height: 100vh;
     width: 245px;
     border-right: 1px solid rgba(0, 0, 0, 0.747);
+}
+
+.navbar a img{
+    width: 110px;
+    height: 40px;
 }
 
 .main{
@@ -26,6 +30,7 @@
 
 .user_stories{
     padding: 10px;
+    height: 100px;
     border: 1px solid rgba(0, 0, 0, 0.747);
     border-radius: 8px;
 }
@@ -56,4 +61,19 @@
     .navbar{
         border-right: 1px solid white;
     }
+
+    .navbar a img{
+        filter: invert(1);
+        filter: brightness(5);
+    }
+
+    .user_stories{
+        border: 1px solid rgba(63, 63, 63, 0.747);
+    }
+
+    .feed ul li{
+        border: 1px solid rgba(63, 63, 63, 0.747);
+    }
+
+    
     }
