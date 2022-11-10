@@ -23,7 +23,7 @@ export default async function get_Users(req, res) {
             }
             break;
         default:
-            res.status(405).end(`Method ${method} Not Allowed`)
+            res.status(405).json(`Method ${method} Not Allowed`)
     }
     
 }

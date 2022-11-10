@@ -24,6 +24,6 @@ export default async function get_Posts(req, res){
             }
             break;
         default:
-            res.status(405).send(`Method ${method} Not Allowed`)
+            res.status(405).json(`Method ${method} Not Allowed`)
     }
 }
