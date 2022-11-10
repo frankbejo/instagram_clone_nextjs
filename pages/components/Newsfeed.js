@@ -1,6 +1,7 @@
 import styles from '../../styles/Home.module.css'
 import {MdMoreHoriz, MdBookmarkBorder} from 'react-icons/md'
 import {AiOutlineHeart, AiOutlineComment, AiOutlineSend} from 'react-icons/ai'
+import Image from 'next/image'
 
 function Newsfeed({posts, users}){
     return(
@@ -16,10 +17,10 @@ function Newsfeed({posts, users}){
                             {
                                 users.filter(user => post.post_owner_id === user._id
                                 ).map(item => {
-                                    return <div className={styles.post}>
+                                    return <div className={styles.post} key={`${item._id}${post._id}`}>
                                         <div className={styles.post_header}>
                                             <div className={styles.post_header_left}>
-                                                <img src={item.image} alt="" />
+                                                <Image src={item.image} alt="" />
                                                 <div className={styles.post_owner_info}>
                                                     <span>{post.post_owner_name}</span>
                                                     <br />
@@ -39,7 +40,7 @@ function Newsfeed({posts, users}){
                                         <div className={styles.content_container}>
                                                 {
                                                     post.content ? (
-                                                        <img src={post.content[0]} type="image/jpg" width="100%" height="100%" />
+                                                        <Image src={post.content[0]} alt="" />
                                                     ):
                                                     (null)
                                                 }
