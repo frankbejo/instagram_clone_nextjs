@@ -20,7 +20,7 @@ function Newsfeed({posts, users}){
                                     return <div className={styles.post} key={`${item._id}${post._id}`}>
                                         <div className={styles.post_header}>
                                             <div className={styles.post_header_left}>
-                                                <Image src={item.image} alt="" />
+                                                <img src={item.image} alt="" width={100} height={100}/>
                                                 <div className={styles.post_owner_info}>
                                                     <span>{post.post_owner_name}</span>
                                                     <br />
@@ -40,7 +40,7 @@ function Newsfeed({posts, users}){
                                         <div className={styles.content_container}>
                                                 {
                                                     post.content ? (
-                                                        <Image src={post.content[0]} alt="" />
+                                                        <img src={post.content[0]} alt="" width={100} height={100}/>
                                                     ):
                                                     (null)
                                                 }
