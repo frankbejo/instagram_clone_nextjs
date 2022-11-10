@@ -5,8 +5,8 @@ import Newsfeed from './components/Newsfeed'
 import Account from './components/Account'
 
 export async function getServerSideProps() {
-  const resposts = await fetch("https://instagram-clone-nextjs-mauve.vercel.app/api/posts")
-  const resusers = await fetch("https://instagram-clone-nextjs-mauve.vercel.app/api/users")
+  const resposts = await fetch("http://localhost:3000/api/posts")
+  const resusers = await fetch("http://localhost:3000/api/users")
   const posts = await resposts.json()
   const users = await resusers.json()
   return { props: { 

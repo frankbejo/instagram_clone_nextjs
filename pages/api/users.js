@@ -3,7 +3,6 @@ import User from "../../database/UserSchema"
 
 export default async function get_Users(req, res) {
     main().catch(err => console.log(err))
-    res.setHeader("Cache-Control","s-maxage=10, stale-while-revalidate")
     const {method} = req
 
     switch(method){

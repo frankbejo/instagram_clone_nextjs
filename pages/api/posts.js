@@ -4,8 +4,6 @@ import Post from "../../database/PostSchema";
 
 export default async function get_Posts(req, res){
     main().catch(error => console.log(error))
-    res.setHeader("Cache-Control","s-maxage=10, stale-while-revalidate")
-    
     const {method} = req;
 
     switch(method){
@@ -26,6 +24,6 @@ export default async function get_Posts(req, res){
             }
             break;
         default:
-            res.status(405).end(`Method ${method} Not Allowed`)
+            res.status(405).send(`Method ${method} Not Allowed`)
     }
 }
