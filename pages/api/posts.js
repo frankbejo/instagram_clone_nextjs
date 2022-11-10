@@ -10,7 +10,8 @@ export default async function get_Posts(req, res){
             try{
                 const posts = await Post.find()
                 res.status(200).json(posts)
-            }catch(err){
+            }
+            catch(err){
                 res.status(500).json(err)
             }
             break;
