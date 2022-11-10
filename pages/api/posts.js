@@ -1,4 +1,3 @@
-
 import main from "./database/Database";
 import Post from "./database/PostSchema";
 
