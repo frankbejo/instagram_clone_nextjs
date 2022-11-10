@@ -3,10 +3,12 @@
 }
 
 .navbar{
+    position: sticky;
     padding: 20px;
     height: 100vh;
     width: 245px;
-    border-right: 1px solid rgba(0, 0, 0, 0.747);
+    border-right: 1px solid rgba(177, 177, 177, 0.747);
+    top: 0;
 }
 
 .navbar a img{
@@ -31,7 +33,7 @@
 .user_stories{
     padding: 10px;
     height: 100px;
-    border: 1px solid rgba(0, 0, 0, 0.747);
+    border: 1px solid rgba(177, 177, 177, 0.747);
     border-radius: 8px;
 }
 
@@ -45,9 +47,44 @@
 }
 
 .feed ul li{
-    padding: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.747);
+    border: 1px solid rgba(177, 177, 177, 0.747);
     border-radius: 8px;
+}
+
+.feed ul li .post_header img{
+    aspect-ratio: 4/4;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+}
+
+.post_header{
+    padding: 10px;
+    display: flex;
+    height: 62px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post_header_left{
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.post_owner_info span:first-child{
+    font-size: 14px;
+    font-weight: 500;
+}
+.post_owner_info span:nth-of-type(2){
+    position: relative;
+    font-size: 12px;
+}
+
+.post_setting{
+    display: flex;
+    justify-content: center;
+    width: 30px;
 }
 
 .account{
@@ -55,6 +92,54 @@
     padding: 10px 0;
     margin-left: 20px;
 }
+
+.content_container{
+    background-color: black;
+}
+
+.content_container img{
+    width: 100%;
+    height: 500px;
+    max-height: 532px;
+    object-fit: scale-down;
+}
+
+.post_footer{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.post_menus{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post_menus_left{
+    display: flex;
+    gap: 10px;
+}
+
+.post_menus svg{
+    width: 25px;
+    height: 25px;
+}
+
+.likes, .caption span{
+    font-weight: 500;
+}
+
+.comments{
+    color: rgba(63, 63, 63, 0.747);
+}
+
+.timespan{
+    font-size: 10px;
+}
+
+
 
 
 @media (prefers-color-scheme: dark) {
