@@ -24,10 +24,10 @@ export default function Home({posts, users}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className={styles.main}>
+      {/* <main className={styles.main}>
         <Newsfeed posts={posts} users={users}/>
         <Account />
-      </main>
+      </main> */}
     </div>
   )
 }
