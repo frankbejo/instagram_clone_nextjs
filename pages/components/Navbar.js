@@ -6,7 +6,7 @@ import textLogo from '../../public/textlogo.png'
 function Navbar(){
     return (
         <nav className={styles.navbar}>
-            <Link href="/" className={styles.home}><Image src={textLogo} /></Link>
+            <Link href="/" className={styles.home}><Image src={textLogo} alt=""/></Link>
             {/* {
                 data.map(item => {
                     console.log(item)
