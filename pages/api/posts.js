@@ -1,6 +1,6 @@
 
-import main from "../../database/Database";
-import Post from "../../database/PostSchema";
+import main from "./database/Database";
+import Post from "./database/PostSchema";
 
 export default async function get_Posts(req, res){
     main().catch(error => console.log(error))

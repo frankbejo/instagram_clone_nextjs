@@ -1,5 +1,5 @@
-import main from "../../database/Database"
-import User from "../../database/UserSchema"
+import main from "./database/Database"
+import User from "./database/UserSchema"
 
 export default async function get_Users(req, res) {
     main().catch(err => console.log(err))
