@@ -4,7 +4,7 @@ import {AiOutlineHeart, AiOutlineComment, AiOutlineSend} from 'react-icons/ai'
 import React, { useState } from "react";
 import InputEmoji from "react-input-emoji";
 
-const Post = ({post, users}) => {
+const Item = ({post, users}) => {
     const [text, setText] = useState("");
     return <li key={post._id}>
     {
@@ -86,4 +86,4 @@ const Post = ({post, users}) => {
     </li>
 }
 
-export default Post
+export default Item

@@ -1,5 +1,5 @@
 import styles from '../../styles/Home.module.css'
-import Post from './Post'
+import Item from './Item'
 
 function Newsfeed({posts, users}){
     
@@ -12,7 +12,7 @@ function Newsfeed({posts, users}){
                 <ul>
                     {
                     posts ? posts.map(post => {
-                        return <Post post={post} users={users}/>
+                        return <Item post={post} users={users}/>
                     }):
                     null
                     }
