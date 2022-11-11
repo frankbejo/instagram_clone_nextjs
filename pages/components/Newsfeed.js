@@ -1,7 +1,6 @@
 import styles from '../../styles/Home.module.css'
 import {MdMoreHoriz, MdBookmarkBorder} from 'react-icons/md'
 import {AiOutlineHeart, AiOutlineComment, AiOutlineSend} from 'react-icons/ai'
-import Image from 'next/image'
 
 function Newsfeed({posts, users}){
     return(
@@ -40,7 +39,7 @@ function Newsfeed({posts, users}){
                                         <div className={styles.content_container}>
                                                 {
                                                     post.content ? (
-                                                        <img src={post.content[0]} alt="" width={100} height={100}/>
+                                                        <img src={post.content[0]} alt="" />
                                                     ):
                                                     (null)
                                                 }

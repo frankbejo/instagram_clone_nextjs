@@ -14,6 +14,7 @@ export default async function get_Users(req, res) {
             catch(error) {
                 res.status(500).json(error)
             }
+            break;
         case "POST":
             try{
                 const users = await User.create(req.body)
@@ -23,7 +24,7 @@ export default async function get_Users(req, res) {
             }
             break;
         default:
-            res.status(405).json(`Method ${method} Not Allowed`)
+            res.status(405).end(`Method ${method} Not Allowed`)
     }
     
 }
