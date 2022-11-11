@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const postSchema = new mongoose.Schema({
     post_owner_id: {
         type: String,
-        required: true,
+        required: true
     },
     post_owner_name: {
         type: String,
