@@ -1,6 +1,7 @@
 import styles from '../../styles/Home.module.css'
-import {MdMoreHoriz, MdBookmarkBorder} from 'react-icons/md'
-import {AiOutlineHeart, AiOutlineComment, AiOutlineSend} from 'react-icons/ai'
+import {MdMoreHoriz} from 'react-icons/md'
+import {BsHeart, BsBookmark} from 'react-icons/bs'
+import {TfiComment, TfiShare} from 'react-icons/tfi'
 import React, { useState } from "react";
 import InputEmoji from "react-input-emoji";
 
@@ -51,12 +52,12 @@ function Newsfeed({posts, users}){
                                     <div className={styles.post_footer}>
                                             <div className={styles.post_menus}>
                                                 <div className={styles.post_menus_left}>
-                                                    <AiOutlineHeart />
-                                                    <AiOutlineComment />
-                                                    <AiOutlineSend />
+                                                    <BsHeart />
+                                                    <TfiComment />
+                                                    <TfiShare />
                                                 </div>
                                                 <div className={styles.bookmark}>
-                                                    <MdBookmarkBorder />
+                                                    <BsBookmark />
                                                 </div>
                                             </div>
                                             <span className={styles.likes}>
@@ -83,7 +84,7 @@ function Newsfeed({posts, users}){
                                             value={text}
                                             onChange={setText}
                                             cleanOnEnter
-                                            placeholder="add a comment"
+                                            placeholder="Add a comment"
                                             />
                                             <div className={styles.post_comment}>
                                                 <span>Post</span>
