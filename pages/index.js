@@ -24,7 +24,7 @@ export default function Home({posts, users}) {
       </Head>
       <div className={styles.home_container}>
         <Newsfeed posts={posts} users={users}/>
-        <Account />
+        <Account users={users}/>
       </div>
     </div>
   )
