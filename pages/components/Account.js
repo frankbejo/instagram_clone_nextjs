@@ -1,15 +1,15 @@
 import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
 
-function Account({users}){
+function Account({user}){
     return(
         <div className={styles.account}>
             <div className={styles.account_switch}>
                 <Link href="/profile">
-                    <img src={users[0].image} alt="" />
+                    <img src={user.image} alt="" />
                     <div className={styles.account_user}>
-                        <span>{users[0].userName}</span>
-                        <span>{`${users[0].firstName} ${users[0].lastName}`}</span>
+                        <span>{user.userName}</span>
+                        <span>{`${user.firstName} ${user.lastName}`}</span>
                     </div>
                 </Link>
                 <span>Switch</span>
