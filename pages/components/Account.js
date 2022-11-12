@@ -5,7 +5,7 @@ function Account({users}){
     return(
         <div className={styles.account}>
             {
-                users ? 
+                users && 
                 users.map(user => {
                     return <div className={styles.account_switch}>
                     <Link href="/profile">
@@ -17,8 +17,7 @@ function Account({users}){
                     </Link>
                     <span>Switch</span>
                 </div>
-                }):
-                null
+                })
             }
             
             <div className={styles.follow_suggestions}>
