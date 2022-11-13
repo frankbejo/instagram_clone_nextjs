@@ -2,6 +2,7 @@ import styles from '../../styles/Home.module.css'
 import {MdMoreHoriz} from 'react-icons/md'
 import {BsHeart, BsBookmark} from 'react-icons/bs'
 import {TfiComment, TfiShare} from 'react-icons/tfi'
+import {BiChevronLeftCircle} from 'react-icons/bi'
 import React, { useState } from "react";
 import InputEmoji from "react-input-emoji";
 import Image from 'next/image';
@@ -36,6 +37,7 @@ function Newsfeed({posts, users}){
                         {
                             users.filter(user => post.post_owner_id === user._id
                             ).map(item => {
+                                const [isClicked, setIsClicked] = useState(false)
                                 const [text, setText] = useState("");
                                 return <div className={styles.post} key={`${item._id}${post._id}`}>
                                     <div className={styles.post_header}>
@@ -58,11 +60,11 @@ function Newsfeed({posts, users}){
                                         </div>
                                     </div>
                                     <div className={styles.content_container}>
-                                            <div className={styles.post_container}>
+                                            <div className={`post_container ${isClicked? "clicked":""}`}>
                                                 {
                                                     post.content.map(content => {
                                                         if(content.type === "image"){
-                                                            return <Image src={content.post_content} width={470} height={470} />
+                                                            return <Image src={content.post_content} width={500} height={500} />
                                                         }
                                                         else if(content.type === "video"){
                                                             return <video src={content.post_content}></video>
@@ -72,6 +74,23 @@ function Newsfeed({posts, users}){
                                                         }
                                                     })
                                                 }
+                                                {
+                                                    
+                                                    post.content.length > 1 ? (
+                                                        <div className={styles.post_container_controls}>
+                                                            <div className='to_left' >
+                                                                <BiChevronLeftCircle />
+                                                            </div>
+                                                            <div className="to_right" onClick={() => setIsClicked(true)}>
+                                                                <BiChevronLeftCircle />
+                                                            </div>
+                                                        </div>
+                                                    ):
+                                                    (
+                                                        null
+                                                    )
+                                                }
+                                                
                                             </div>
                                             
                                             
