@@ -7,21 +7,23 @@ import {MdOutlineExplore} from 'react-icons/md'
 import {RiMessengerLine} from 'react-icons/ri'
 import {AiOutlineHeart} from 'react-icons/ai'
 import {BiMessageSquareAdd} from 'react-icons/bi'
+import {FiInstagram} from 'react-icons/fi'
 
 function Navbar(){
     return (
         <nav className={styles.navbar}>
-            <Link href="/" className={styles.home}>
+            <Link href="/" className={styles.brand_logo}>
+                <FiInstagram />
                 <Image src={textLogo} alt=""/>
             </Link>
             <div className={styles.navlinks}>
-                <Link href="/"><GrHomeRounded />Home</Link>
-                <Link href="/"><GrSearch />Search</Link>
-                <Link href="/explore"><MdOutlineExplore />Explore</Link>
-                <Link href="/"><RiMessengerLine />Messages</Link>
-                <Link href="/"><AiOutlineHeart />Notifications</Link>
-                <Link href="/"><BiMessageSquareAdd />Create</Link>
-                <Link href="/">Profile</Link>
+                <Link href="/"><GrHomeRounded /><span>Home</span></Link>
+                <Link href="/"><GrSearch /><span>Search</span></Link>
+                <Link href="/explore"><MdOutlineExplore /><span>Explore </span></Link>
+                <Link href="/"><RiMessengerLine /><span>Messages</span></Link>
+                <Link href="/"><AiOutlineHeart /><span>Notifications</span></Link>
+                <Link href="/"><BiMessageSquareAdd /><span>Create</span></Link>
+                <Link href="/"><span>Profile</span></Link>
             </div>
             
         </nav>

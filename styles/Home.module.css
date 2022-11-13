@@ -16,18 +16,26 @@
 
 }
 
+.main{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-bg-light);
+    width: 100%;
+}
+
 /* navbar-------------------------------------- */
 .navbar{
+    height: 100vh;
+    width: 260px;
     top: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
     position: sticky;
     padding: 20px;
-    height: 100vh;
-    width: 245px;
     border-right: 1px solid var(--border-light);
     background-color: var(--navbar-bg-light);
+    overflow: hidden;
 }
 
 .navbar a img{
@@ -35,21 +43,38 @@
     height: 40px;
 }
 
+.brand_logo{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand_logo svg{
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
 .navlinks{
     display: flex;
     flex-direction: column;
 }
 
-.navlinks > a{
+.navlinks a{
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 20px 20px 20px 5px;
+    gap: 20px;
+    padding: 20px 20px 20px 0px;
+}
+
+.navlinks a span{
+    height: 20px;
 }
 
 .navlinks svg{
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     color: var(--big-text-light);
 }
 
@@ -151,26 +176,12 @@
     font-weight: 500;
 }
 
-.main{
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--main-bg-light);
-    width: 100%;
-}
-
+/* newsfeed--------------------------------------- */
 .newsfeed{
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 470px;
-}
-
-.user_stories{
-    padding: 10px;
-    height: 100px;
-    border: 1px solid var(--border-light);
-    border-radius: 8px;
-    background-color: var(--post-bg-light);
 }
 
 .feed ul{
@@ -194,6 +205,37 @@
     height: 35px;
     border-radius: 20px;
 }
+
+.content_container{
+    max-height: 532px;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+.content_container{
+    display: flex;
+}
+
+.content_container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post_container img{
+    aspect-ratio: 1/1;
+}
+
+
+.user_stories{
+    padding: 10px;
+    height: 100px;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    background-color: var(--post-bg-light);
+}
+
+
 
 .post_header{
     padding: 10px;
@@ -224,18 +266,7 @@
     width: 30px;
 }
 
-.content_container{
-    max-height: 532px;
-    background-color: rgb(0, 0, 0);
-    overflow: hidden;
-}
 
-.content_container img{
-    width: 100%;
-    height: 100%;
-    max-height: 532px;
-    object-fit: scale-down;
-}
 
 .post_footer{
     padding: 10px;
@@ -346,6 +377,11 @@
     flex-direction: row;
 }
 
+/* explore-------------------------------------------- */
+.explore{
+    width: 100%;
+}
+
 @media (prefers-color-scheme: dark) {
     .main{
         background-color: var(--main-bg-dark);
@@ -415,4 +451,46 @@
     .follow_suggestions .header span:last-of-type{
         color: var(--big-text-dark);
     }
+    }
+
+    
+    @media screen and (max-width: 1060px){
+        .navbar{
+            width: 90px;
+        }
+
+        .navlinks a{
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .brand_logo{
+            justify-content: center;
+        }
+
+        .brand_logo svg{
+            display: block;
+        }
+
+        .navbar .brand_logo img{
+            display: none;
+        }
+
+        .navlinks span{
+            display: none;
+        }
+    
+    }
+
+    @media screen and (max-width: 930px){
+        .account{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 590px){
+        .navbar{
+            display: none;
+        }
     }

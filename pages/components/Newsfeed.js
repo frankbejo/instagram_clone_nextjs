@@ -4,9 +4,25 @@ import {BsHeart, BsBookmark} from 'react-icons/bs'
 import {TfiComment, TfiShare} from 'react-icons/tfi'
 import React, { useState } from "react";
 import InputEmoji from "react-input-emoji";
+import Image from 'next/image';
 
 function Newsfeed({posts, users}){
-    
+    const getRatio = (ratio) => {
+        switch (ratio) {
+            case "1:1":
+                return "ratioone"
+                break;
+            case "4:5":
+                return "ratio45"
+                break;
+            case "16:9":
+                return "ratio169"
+                break;
+            default:
+                return "ratioone"
+                break;
+        }
+    }
     return(
         <div className={styles.newsfeed}>
             <div className={styles.user_stories}>
@@ -42,12 +58,23 @@ function Newsfeed({posts, users}){
                                         </div>
                                     </div>
                                     <div className={styles.content_container}>
-                                            {
-                                                post.content ? (
-                                                    <img src={post.content[0]} alt="" />
-                                                ):
-                                                (null)
-                                            }
+                                            <div className={styles.post_container}>
+                                                {
+                                                    post.content.map(content => {
+                                                        if(content.type === "image"){
+                                                            return <Image src={content.post_content} width={470} height={470} />
+                                                        }
+                                                        else if(content.type === "video"){
+                                                            return <video src={content.post_content}></video>
+                                                        }
+                                                        else{
+                                                            return
+                                                        }
+                                                    })
+                                                }
+                                            </div>
+                                            
+                                            
                                     </div>
                                     <div className={styles.post_footer}>
                                             <div className={styles.post_menus}>

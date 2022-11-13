@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 
 function MyApp({ Component, pageProps }) {
   return <main className={styles.main}>
-    <Navbar />
+    <Navbar {...pageProps}/>
     <Component {...pageProps} />
   </main>
 }
