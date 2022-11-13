@@ -346,17 +346,6 @@
     flex-direction: row;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media (prefers-color-scheme: dark) {
     .main{
         background-color: var(--main-bg-dark);
