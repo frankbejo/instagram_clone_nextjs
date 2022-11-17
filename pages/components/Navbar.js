@@ -1,4 +1,3 @@
-import styles from '../../styles/Home.module.css'
 import textLogo from '../../public/textlogo.png'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -11,24 +10,27 @@ import {FiInstagram} from 'react-icons/fi'
 
 function Navbar(){
     return (
-        <nav className={styles.navbar}>
-            <Link href="/" className={styles.brand_logo}>
-                <FiInstagram />
-                <Image src={textLogo} alt=""/>
+        <nav className='flex flex-col gap-10 sticky p-1 top-0 h-screen z-50 max-xl:w-auto  ' >
+            <Link href="/" className='brand_logo_container flex items-center h-12'>
+                <FiInstagram className='w-6 h-6 xl:hidden'/>
+                <div className="brand_logo max-xl:hidden relative w-32 h-12 -ml-1">
+                    <Image src={textLogo} alt="" layout='fill' objectFit='contain'/>
+                </div>
             </Link>
-            <div className={styles.navlinks}>
-                <Link href="/"><GrHomeRounded /><span>Home</span></Link>
-                <Link href="/"><GrSearch /><span>Search</span></Link>
-                <Link href="/explore"><MdOutlineExplore /><span>Explore </span></Link>
-                <Link href="/"><RiMessengerLine /><span>Messages</span></Link>
-                <Link href="/"><AiOutlineHeart /><span>Notifications</span></Link>
-                <Link href="/"><BiMessageSquareAdd /><span>Create</span></Link>
-                <Link href="/"><span>Profile</span></Link>
+            <div className="navlinks">
+                <Link href="/"><GrHomeRounded className='home_icon w-6 h-6'/><span className='max-xl:hidden'>Home</span></Link>
+                <Link href="/"><GrSearch className='w-6 h-6'/><span className='max-xl:hidden'>Search</span></Link>
+                <Link href="/explore"><MdOutlineExplore className='w-6 h-6'/><span className='max-xl:hidden'>Explore </span></Link>
+                <Link href="/"><RiMessengerLine className='w-6 h-6'/><span className='max-xl:hidden'>Messages</span></Link>
+                <Link href="/"><AiOutlineHeart className='w-6 h-6'/><span className='max-xl:hidden'>Notifications</span></Link>
+                <Link href="/"><BiMessageSquareAdd className='w-6 h-6'/><span className='max-xl:hidden'>Create</span></Link>
+                <Link href="/"><span className='max-xl:hidden'>Profile</span></Link>
             </div>
             
         </nav>
     )
 }
+
 
 
 

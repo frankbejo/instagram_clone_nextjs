@@ -1,30 +1,32 @@
-import styles from '../../styles/Home.module.css'
+import Image from 'next/image'
 import Link from 'next/link'
 
 function Account({users}){
     return(
-        <div className={styles.account}>
+        <div className='account flex flex-col max-lg:hidden sticky top-5 gap-3'>
             {
                 users ? 
                 users.map(user => {
-                    return <div className={styles.account_switch}>
-                    <Link href="/profile">
-                        <img src={user.image} alt="" width={100} height={100}/>
-                        <div className={styles.account_user}>
-                            <span>{user.userName}</span>
+                    return <div className='flex justify-between items-center'>
+                    <Link href="/profile" className='flex items-center gap-3'>
+                        <div className='relative w-14 h-14'>
+                            <Image src={user.image} alt="" layout='fill' objectFit='cover' className='rounded-full'/>
+                        </div>
+                        <div className='flex flex-col'>
+                            <span className='font-semibold'>{user.userName}</span>
                             <span>{`${user.firstName} ${user.lastName}`}</span>
                         </div>
                     </Link>
-                    <span>Switch</span>
+                    <span className='font-semibold'>Switch</span>
                 </div>
                 }):
                 null
             }
             
-            <div className={styles.follow_suggestions}>
-                <div className={styles.header}>
+            <div>
+                <div className=' suggestions flex justify-between'>
                     <span>Suggestions For You</span>
-                    <span>See All</span>
+                    <span className='font-semibold'>See All</span>
                 </div>
             </div>
         </div>
