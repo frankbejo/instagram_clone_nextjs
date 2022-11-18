@@ -10,11 +10,13 @@ import {FiInstagram} from 'react-icons/fi'
 
 function Navbar(){
     return (
-        <nav className='flex flex-col gap-10 sticky p-1 top-0 h-screen z-50 max-xl:w-auto  ' >
-            <Link href="/" className='brand_logo_container flex items-center h-12'>
+        <nav className='max-h-full z-50 max-xl:w-auto ' >
+            <div className="navbar_container flex flex-col gap-10 sticky top-0 p-1 ">
+            <Link href="/" className='brand_logo_container flex items-center w-fit h-12 select-none'>
                 <FiInstagram className='w-6 h-6 xl:hidden'/>
                 <div className="brand_logo max-xl:hidden relative w-32 h-12 -ml-1">
                     <Image src={textLogo} alt="" layout='fill' objectFit='contain'/>
+                    <span className='brand_logo_clone_text font-semibold absolute right-2 top-1'>clone</span>
                 </div>
             </Link>
             <div className="navlinks">
@@ -26,7 +28,7 @@ function Navbar(){
                 <Link href="/"><BiMessageSquareAdd className='w-6 h-6'/><span className='max-xl:hidden'>Create</span></Link>
                 <Link href="/"><span className='max-xl:hidden'>Profile</span></Link>
             </div>
-            
+            </div>
         </nav>
     )
 }

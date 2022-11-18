@@ -5,11 +5,14 @@
 :root{
     --main-bg-light: #fafafa;
     --navbar-bg-light: #ffffff;
-    --post-bg-light: #ffffff;
+    --post-bg-light: #ffffff; 
     --action-hover-light: rgba(219,219,219,0.3);
+    --action-button-light: rgba(0,149,246, 1);
+    --post-button-disabled-light: rgba(82,182,247, 1);
     --border-light: rgb(219,219,219);
     --big-text-light: #000000;
     --small-text-light: rgba(63, 63, 63, 0.747);
+    --clone-text-color-light: rgb(209, 58, 255);
     /* dark */
     --main-bg-dark: rgba(26, 26, 26, 0.747);
     --navbar-bg-dark: rgba(22, 22, 22, 0.747);
@@ -37,7 +40,7 @@ a {
   box-sizing: border-box;
 }
 
-.main{
+body{
   background-color: var(--main-bg-light);
 }
 
@@ -50,11 +53,15 @@ nav{
 
 .brand_logo_container{
   margin-top: 10px;
-  padding: 0 20px;
+  padding-left: 20px;
 }
 
 .brand_logo img{
   filter: contrast(200%);
+}
+
+.brand_logo_clone_text{
+  color: var(--clone-text-color-light);
 }
 
 .navlinks a{
@@ -142,6 +149,10 @@ nav{
   flex-direction: row;
 }
 
+.add_comment .post_button{
+  color: var(--action-button-light);
+}
+
 /* story--------------------------------------------------- */
 .stories{
   border: 1px solid var(--border-light)
@@ -160,6 +171,14 @@ nav{
 .account{
   width: 319px;
   height: 100%;
+}
+
+.switch_button{
+  color: var(--action-button-light);
+}
+
+.see_all_button{
+  color: var(--big-text-light);
 }
 
 @media (prefers-color-scheme: dark) {

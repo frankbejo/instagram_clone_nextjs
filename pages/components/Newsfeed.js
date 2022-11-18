@@ -10,8 +10,65 @@ function Newsfeed({posts, users}){
     return(
         <div className='newsfeed flex flex-col w-full gap-3'>
             <div className='stories flex items-center h-32 rounded-lg'>
-                <div className="stories_container">
-                    stories
+                <div className="stories_container overflow-hidden">
+                    <ul className='flex gap-2 px-3'>
+                        <li className='flex flex-col items-center w-16'>
+                            <div className="image_container relative w-14 h-14">
+                                <Image src='/1.jpg' alt="" layout='fill' objectFit='cover' className='rounded-full'/>
+                            </div>
+                            <div className="story_owner relative w-20 overflow-hidden text-ellipsis px-2">
+                                <span className=''>frankbejo</span>
+                            </div>
+                        </li>
+                        <li className='flex flex-col items-center w-16'>
+                            <div className="image_container relative w-14 h-14">
+                                <Image src='/1.jpg' alt="" layout='fill' objectFit='cover' className='rounded-full'/>
+                            </div>
+                            <div className="story_owner relative w-20 overflow-hidden text-ellipsis px-2">
+                                <span className=''>janaudreysus</span>
+                            </div>
+                        </li>
+                        <li className='flex flex-col items-center w-16'>
+                            <div className="image_container relative w-14 h-14">
+                                <Image src='/1.jpg' alt="" layout='fill' objectFit='cover' className='rounded-full'/>
+                            </div>
+                            <div className="story_owner relative w-20 overflow-hidden text-ellipsis px-2">
+                                <span className=''>frankbejoawdawd</span>
+                            </div>
+                        </li>
+                        <li className='flex flex-col items-center w-16'>
+                            <div className="image_container relative w-14 h-14">
+                                <Image src='/1.jpg' alt="" layout='fill' objectFit='cover' className='rounded-full'/>
+                            </div>
+                            <div className="story_owner relative w-20 overflow-hidden text-ellipsis px-2">
+                                <span className=''>frankbejoawdawd</span>
+                            </div>
+                        </li>
+                        <li className='flex flex-col items-center w-16'>
+                            <div className="image_container relative w-14 h-14">
+                                <Image src='/1.jpg' alt="" layout='fill' objectFit='cover' className='rounded-full'/>
+                            </div>
+                            <div className="story_owner relative w-20 overflow-hidden text-ellipsis px-2">
+                                <span className=''>frankbejoawdawd</span>
+                            </div>
+                        </li>
+                        <li className='flex flex-col items-center w-16'>
+                            <div className="image_container relative w-14 h-14">
+                                <Image src='/1.jpg' alt="" layout='fill' objectFit='cover' className='rounded-full'/>
+                            </div>
+                            <div className="story_owner relative w-20 overflow-hidden text-ellipsis px-2">
+                                <span className=''>frankbejoawdawd</span>
+                            </div>
+                        </li>
+                        <li className='flex flex-col items-center w-16'>
+                            <div className="image_container relative w-14 h-14">
+                                <Image src='/1.jpg' alt="" layout='fill' objectFit='cover' className='rounded-full'/>
+                            </div>
+                            <div className="story_owner relative w-20 overflow-hidden text-ellipsis px-2">
+                                <span className=''>frankbejoawdawd</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div>
@@ -131,7 +188,7 @@ function Newsfeed({posts, users}){
                                                 5 HOURS AGO
                                             </span>
                                     </div>
-                                    <div className='add_comment px-3 -ml-3'>
+                                    <div className='add_comment px-3'>
                                         <InputEmoji
                                             value={text}
                                             onChange={setText}
@@ -139,7 +196,7 @@ function Newsfeed({posts, users}){
                                             placeholder="Add a comment"
                                             />
                                             <div className='py-2 cursor-pointer'>
-                                                <span>Post</span>
+                                                <span className='post_button font-semibold'>Post</span>
                                             </div>
                                     </div>
                                 </div>

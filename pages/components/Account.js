@@ -17,7 +17,7 @@ function Account({users}){
                             <span>{`${user.firstName} ${user.lastName}`}</span>
                         </div>
                     </Link>
-                    <span className='font-semibold'>Switch</span>
+                    <span className='switch_button font-semibold'>Switch</span>
                 </div>
                 }):
                 null
@@ -26,7 +26,7 @@ function Account({users}){
             <div>
                 <div className=' suggestions flex justify-between'>
                     <span>Suggestions For You</span>
-                    <span className='font-semibold'>See All</span>
+                    <span className='see_all_button font-semibold'>See All</span>
                 </div>
             </div>
         </div>

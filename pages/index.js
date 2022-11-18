@@ -15,7 +15,7 @@ export async function getServerSideProps() {
 export default function Home({posts, users}) {
   return (
     <div className='w-full p-5'>
-      <section className="home flex justify-center w-full gap-8">
+      <section className="home flex justify-center min-h-screen w-full gap-8">
         <Newsfeed posts={posts} users={users}/>
         <Account users={users}/>
       </section>
