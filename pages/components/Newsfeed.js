@@ -195,8 +195,10 @@ function Newsfeed({posts, users}){
                                             cleanOnEnter
                                             placeholder="Add a comment"
                                             />
-                                            <div className='py-2 cursor-pointer'>
-                                                <span className='post_button font-semibold'>Post</span>
+                                            <div className={`${text === "" ? "disable_post_button":"post_button"} py-2 cursor-pointer`}>
+                                                <button>
+                                                    <span className='font-semibold'>Post</span>
+                                                </button>
                                             </div>
                                     </div>
                                 </div>

@@ -7,12 +7,12 @@
     --navbar-bg-light: #ffffff;
     --post-bg-light: #ffffff; 
     --action-hover-light: rgba(219,219,219,0.3);
-    --action-button-light: rgba(0,149,246, 1);
-    --post-button-disabled-light: rgba(82,182,247, 1);
+    --action-button-light: rgba(209, 58, 255, 1);
+    --post-button-disabled-light: rgba(209, 58, 255, 0.5);
     --border-light: rgb(219,219,219);
     --big-text-light: #000000;
     --small-text-light: rgba(63, 63, 63, 0.747);
-    --clone-text-color-light: rgb(209, 58, 255);
+    --clone-text-color-light: rgba(209, 58, 255, 1);
     /* dark */
     --main-bg-dark: rgba(26, 26, 26, 0.747);
     --navbar-bg-dark: rgba(22, 22, 22, 0.747);
@@ -151,6 +151,16 @@ nav{
 
 .add_comment .post_button{
   color: var(--action-button-light);
+}
+
+.add_comment .disable_post_button span{
+  color: var(--post-button-disabled-light);
+  pointer-events: none;
+}
+
+.add_comment .disable_post_button button{
+  pointer-events: none;
+  cursor: none;
 }
 
 /* story--------------------------------------------------- */
